@@ -1,4 +1,4 @@
-package Final;
+ï»¿package Final;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +51,7 @@ public class BeverageManager {
 	}
 	
 	public void showList() {
-		System.out.println( sampleBeverage.getName() + " " + getCount() + "°³" );
+		System.out.println( sampleBeverage.getName() + " " + getCount() + "ê°œ" );
 	}
 }
 

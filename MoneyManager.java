@@ -1,4 +1,4 @@
-package Final;
+ï»¿package Final;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class MoneyManager {
 		int count = getCount();
 		if( count > 0 ) {
 			Money money = listMoney.get(0);
-			System.out.println( money.getPrice() + money.getUnit() + " " + count + "°³" );
+			System.out.println( money.getPrice() + money.getUnit() + " " + count + "ê°œ" );
 		}
 	}
 	

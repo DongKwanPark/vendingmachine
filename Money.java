@@ -1,4 +1,4 @@
-package Final;
+ï»¿package Final;
 
 public class Money {
 	
@@ -6,7 +6,7 @@ public class Money {
 	protected String unit;
 		
 	Money() {
-		this.unit = "¿ø";
+		this.unit = "ì›";
 	}
 	
 	public int getPrice() {

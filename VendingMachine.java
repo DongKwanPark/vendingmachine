@@ -1,4 +1,4 @@
-package Final;
+ï»¿package Final;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,11 +68,11 @@ public class VendingMachine {
 		while( run )
 		{
 			System.out.println( "####################" );
-			System.out.println( "# 1. µ¿Àü ÅõÀÔ" );
-			System.out.println( "# 2. À½·á¼ö" );
-			System.out.println( "# 3. °Å½º¸§µ·" );
-			System.out.println( "# 4. ÀÚÆÇ±â »óÅÂ" );
-			System.out.println( "# 5. Á¾·á" );
+			System.out.println( "# 1. ë™ì „ íˆ¬ì…" );
+			System.out.println( "# 2. ìŒë£Œìˆ˜" );
+			System.out.println( "# 3. ê±°ìŠ¤ë¦„ëˆ" );
+			System.out.println( "# 4. ìíŒê¸° ìƒíƒœ" );
+			System.out.println( "# 5. ì¢…ë£Œ" );
 			System.out.println( "####################" );
 			
 			Scanner scanner = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class VendingMachine {
 			switch( select )
 			{
 				case 1 :
-					System.out.println( "µ·À» ³Ö¾îÁÖ¼¼¿ä." );
+					System.out.println( "ëˆì„ ë„£ì–´ì£¼ì„¸ìš”." );
 					int money = scanner.nextInt();
 					if( setMoney( money ) ) {
 						putCustomerMoney( money );	
@@ -90,7 +90,7 @@ public class VendingMachine {
 					}
 					break;
 				case 2 :
-					System.out.println( "À½·á¼ö¸¦ ¼±ÅÃÇÏ¼¼¿ä." );
+					System.out.println( "ìŒë£Œìˆ˜ë¥¼ ì„ íƒí•˜ì„¸ìš”." );
 					showBeverageSelect();
 					selectBeverage( scanner.nextInt(), 1 );
 					break;
@@ -107,7 +107,7 @@ public class VendingMachine {
 					run = false;
 					break;
 				default :
-					System.out.println( "ÀÚÆÇ±â¸¦ Èçµé°Å³ª Ä¡Áö ¸¶½Ê½Ã¿À." );
+					System.out.println( "ìíŒê¸°ë¥¼ í”ë“¤ê±°ë‚˜ ì¹˜ì§€ ë§ˆì‹­ì‹œì˜¤." );
 					break;
 			}
 			
@@ -117,12 +117,12 @@ public class VendingMachine {
 			System.out.println();
 		}
 		
-		System.out.println( "ÇÑ±¹ ÀÚÆÇ±â¸¦ ÀÌ¿ëÇØÁÖ¼Å¼­ °©»çÇÕ´Ï´Ù." );
+		System.out.println( "í•œêµ­ ìíŒê¸°ë¥¼ ì´ìš©í•´ì£¼ì…”ì„œ ê°‘ì‚¬í•©ë‹ˆë‹¤." );
 	}
 	
 	private void putCustomerMoney(int money) {
 		this.customerMoney += money;
-		System.out.println( customerMoney + "¿øÀÌ ÅõÀÔµÇ¾ú½À´Ï´Ù." );
+		System.out.println( customerMoney + "ì›ì´ íˆ¬ì…ë˜ì—ˆìŠµë‹ˆë‹¤." );
 	}
 	
 	public void selectBeverage(int select, int buycount) {
@@ -131,25 +131,25 @@ public class VendingMachine {
 			int selectIndex = 0;
 			Beverage beverage = bm.select( selectIndex );
 			if( beverage == null ) {
-				System.out.println( "¼±ÅÃÇÑ À½·á¼ö°¡ ºÎÁ·ÇÕ´Ï´Ù." );
+				System.out.println( "ì„ íƒí•œ ìŒë£Œìˆ˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤." );
 			} else {
 				int price = beverage.getPrice();
 				String name = beverage.getName();
 				if( price > getCustomerMoney() ) {
-					System.out.println( "µ·ÀÌ  ºÎÁ·ÇÕ´Ï´Ù." );	
+					System.out.println( "ëˆì´  ë¶€ì¡±í•©ë‹ˆë‹¤." );	
 				} else {
 					if( bm.buy( buycount, selectIndex ) ) {
 						setCustomerMoney( getCustomerMoney() - price );
-						System.out.println( name + " " + buycount + "°³°¡ ³ª¿Ô½À´Ï´Ù." );
-						System.out.println( "³²Àº ±İ¾×Àº " + getCustomerMoney() + "¿ø ÀÔ´Ï´Ù." );
+						System.out.println( name + " " + buycount + "ê°œê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤." );
+						System.out.println( "ë‚¨ì€ ê¸ˆì•¡ì€ " + getCustomerMoney() + "ì› ì…ë‹ˆë‹¤." );
 					} else {
-						System.out.println( "ÀÚÆÇ±â¿¡ ¿À·ù°¡ ³µ½À´Ï´Ù. °ü¸®ÀÚ¿¡°Ô ¹®ÀÇ ¹Ù¶ø´Ï´Ù." );
+						System.out.println( "ìíŒê¸°ì— ì˜¤ë¥˜ê°€ ë‚¬ìŠµë‹ˆë‹¤. ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜ ë°”ëë‹ˆë‹¤." );
 					}
 				}	
 			}
 		}
 		else {
-			System.out.println( "¼±ÅÃÀ» Àß¸øÇÏ¿´½À´Ï´Ù." );
+			System.out.println( "ì„ íƒì„ ì˜ëª»í•˜ì˜€ìŠµë‹ˆë‹¤." );
 		}
 	}
 	
@@ -164,7 +164,7 @@ public class VendingMachine {
 	public void giveChange() {
 		int giveMoney = getMoney( getCustomerMoney() );
 		this.customerMoney -= giveMoney; 
-		System.out.println( "¹İÈ¯ ±İ¾×Àº " + giveMoney + "¿ø ÀÔ´Ï´Ù." );
+		System.out.println( "ë°˜í™˜ ê¸ˆì•¡ì€ " + giveMoney + "ì› ì…ë‹ˆë‹¤." );
 		showMoneyList();
 	}
 	
@@ -195,8 +195,8 @@ public class VendingMachine {
 				if( saveCount > 0 ) {
 					result = mm.setMoney( saveCount, makeMoney( index ) );
 					if( !result ) {
-						System.out.println( "ÀúÀå ÇÒ ¼ö ÀÖ´Â ÃÖ´ë°³¼ö " + mm.getMaxStoreCount() + "°³°¡ ³Ñ¾ú½À´Ï´Ù." );
-						System.out.println( "°ü¸®ÀÚ¿¡°Ô ¹®ÀÇ ¹Ù¶ø´Ï´Ù." );
+						System.out.println( "ì €ì¥ í•  ìˆ˜ ìˆëŠ” ìµœëŒ€ê°œìˆ˜ " + mm.getMaxStoreCount() + "ê°œê°€ ë„˜ì—ˆìŠµë‹ˆë‹¤." );
+						System.out.println( "ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜ ë°”ëë‹ˆë‹¤." );
 						break;
 					} else {
 						saveMoney /= price;
@@ -218,8 +218,8 @@ public class VendingMachine {
 				if( removeCount > 0 ) {
 					boolean result = mm.giveMoney( removeCount, makeMoney( index ) );
 					if( !result ) {
-						System.out.println( "¹İÈ¯ÇÒ" + price + "ÀÇ °³¼ö°¡ ºÎÁ·ÇÕ´Ï´Ù." );
-						System.out.println( "°ü¸®ÀÚ¿¡°Ô ¹®ÀÇ ¹Ù¶ø´Ï´Ù." );
+						System.out.println( "ë°˜í™˜í• " + price + "ì˜ ê°œìˆ˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤." );
+						System.out.println( "ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜ ë°”ëë‹ˆë‹¤." );
 						break;
 					} else {
 						giveMoney %= price;

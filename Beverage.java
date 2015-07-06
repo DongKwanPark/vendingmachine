@@ -1,4 +1,4 @@
-package Final;
+Ôªøpackage Final;
 
 public class Beverage {
 	protected int price;
@@ -26,7 +26,7 @@ public class Beverage {
 class Coke extends Beverage {
 	Coke() {
 		this.price = 600;
-		this.name = "ƒ›∂Û";
+		this.name = "ÏΩúÎùº";
 		this.makeDate = "2015.06.05";
 		this.selfLife = "2016.12.01";
 	}
@@ -35,7 +35,7 @@ class Coke extends Beverage {
 class Cider extends Beverage {
 	Cider() {
 		this.price = 600;
-		this.name = "ªÁ¿Ã¥Ÿ";
+		this.name = "ÏÇ¨Ïù¥Îã§";
 		this.makeDate = "2015.06.05";
 		this.selfLife = "2016.12.01";
 	}
@@ -44,7 +44,7 @@ class Cider extends Beverage {
 class Coffe extends Beverage {
 	Coffe() {
 		this.price = 500;
-		this.name = "ƒø««";
+		this.name = "Ïª§Ìîº";
 		this.makeDate = "2015.06.05";
 		this.selfLife = "2016.08.12";
 	}
@@ -53,7 +53,7 @@ class Coffe extends Beverage {
 class Juice extends Beverage {
 	Juice() {
 		this.price = 700;
-		this.name = "¡ÍΩ∫";
+		this.name = "Ï•¨Ïä§";
 		this.makeDate = "2015.06.05";
 		this.selfLife = "2016.05.29";
 	}
@@ -62,7 +62,7 @@ class Juice extends Beverage {
 class Soda extends Beverage {
 	Soda() {
 		this.price = 1000;
-		this.name = "π–≈∞Ω∫";
+		this.name = "Î∞ÄÌÇ§Ïä§";
 		this.makeDate = "2015.06.05";
 		this.selfLife = "2017.03.29";
 	}
